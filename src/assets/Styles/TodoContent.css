@@ -1,0 +1,103 @@
+.todo-box{
+  width: 100%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.055);
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+  .todo-box > .no-activity{
+    text-align: center;
+    margin-top: 120px;
+  }
+
+.todo-content{
+  display: flex;
+  align-items: center;
+}
+
+  .todo-content:hover{
+    background: rgb(52,73,94);
+    border-radius: 4px;
+    background: linear-gradient(93deg, rgba(52,73,94,1) 0%, rgba(255,255,255,0.0) 100%);
+  }
+
+  .todo-content:hover .remove > button{
+    opacity: 1;
+  }
+
+  .todo-content .remove > button{
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+
+  .todo-content .remove > button svg{
+    width: 20px;
+    color: var(--default);
+  }
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  flex-basis: 90%;
+}
+  .checkbox .radio-label{
+    margin-left: 10px;
+    font-style: normal;
+  }
+  
+  .checkbox .radio-label.done{
+    text-decoration: line-through;
+    font-style: italic;
+    color:  rgb(145, 145, 145);
+  }
+
+.checkbox-input{
+  border: 2px solid var(--default);
+  border-radius: 4px;
+  width: 25px;
+  height: 25px;
+}
+.checkbox-input.done{
+  border: 2px solid  rgb(145, 145, 145);
+  color:  rgb(145, 145, 145);
+}
+  .checkbox-input input{
+    opacity: 0;
+  }
+  .checkbox-input .checkbox-control{
+    top: -24px;
+    position: relative;
+  }
+
+  .checkbox-input .checkbox-control svg{
+    transition: transform 0.1s ease-in 25ms;
+    transform: scale(0);
+    transform-origin: bottom left;
+    position: relative;
+    top: 4px;
+  }
+
+  .checkbox-input input:checked + .checkbox-control svg {
+    transform: scale(1);
+  }
+
+::-webkit-scrollbar{
+  width: 3px;
+}
+::-webkit-scrollbar-track{
+  background-color:rgba(44, 62, 80,1.0);
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--default);
+}

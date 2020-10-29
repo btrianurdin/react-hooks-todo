@@ -1,0 +1,110 @@
+html{
+  --default: #fff;
+  --default-deep: #ecf0f1;
+  --blue: #3498db;
+  --blue-deep: #2980b9;
+  --red: #e74c3c;
+  --red-deep: #c0392b;
+  --green: #2ecc71;
+  --green-deep: #27ae60;
+  --yellow: #f1c40f;
+  --yellow-deep: #e7bd15;
+  --dark: #34495e;
+}
+*,::after,::before{
+  box-sizing: border-box;
+}
+
+.container{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.main{
+  width: 450px;
+  margin: 20px auto;
+}
+
+.title{
+  text-align: center;
+  font-size: 50px;
+  margin: 15px 0;
+}
+
+.btn{
+  background-color: var(--default);
+  border: none;
+  padding: 13px 15px;
+  border-radius: 4px;
+  color: var(--dark);
+  font-weight: 600;
+  margin: 10px 0;
+  cursor: pointer;
+  z-index: 10;
+}
+.btn-primary:hover{
+  background-color: var(--blue-deep);
+}
+  .btn-primary{
+    background-color: var(--blue);
+    color: var(--default);
+  }
+.btn-danger{
+  background-color: var(--red);
+  color: var(--default);
+}
+  .btn-danger:hover{
+    background-color: var(--red-deep);
+  }
+
+.btn-success{
+  background-color: var(--green);
+}
+  .btn-success:hover{
+    background-color: var(--green-deep);
+  }
+
+.btn-block{
+  width: 100%;
+}
+
+
+form{
+  display: none;
+}
+
+  form.input-show{
+    display: flex;
+    height: 44px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+.input{
+  box-sizing: border-box;
+  padding: 10px 15px;
+  flex-basis: 80%;
+  height: 41px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+}
+
+.btn-add-todo {
+  flex-basis: 20%;
+  border-radius: 0 4px 4px 0;
+  padding: 8px 0 10.6px 0;
+}
+  .btn-add-todo > svg{
+    width: 17px;
+    color: var(--default);
+    bottom: -2px;
+    position: relative;
+  }
+.footer{
+  margin: 10px 0;
+}
+  .footer h5{
+    text-align: center;
+    font-weight: 100;
+    padding: 5px;
+  }
